@@ -1,0 +1,1 @@
+ALTER TABLE if EXISTS t_moto ADD andando BOOLEAN;

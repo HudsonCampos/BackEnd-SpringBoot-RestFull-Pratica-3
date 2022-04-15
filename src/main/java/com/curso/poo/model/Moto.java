@@ -31,9 +31,7 @@ public class Moto implements Serializable{
 	@Id
 	@SequenceGenerator(name = "seq_moto", sequenceName = "seq_moto", allocationSize = 1)
 	@GeneratedValue(generator = "seq_moto", strategy = GenerationType.SEQUENCE)
-	private Integer id;
-	
-	
+	private Integer id;	
 	
 	@Column(name = "cor", nullable = false, length = 250)
 	//@NotEmpty(message = "{campo.cor.obrigatorio}") -> caso não tenha VO
@@ -41,4 +39,7 @@ public class Moto implements Serializable{
 	
 	@Column(name = "cilindradas", nullable = false)
 	private Integer cilindradas;
+	
+	@Column(nullable = false)
+	private Boolean andando;
 }

@@ -5,10 +5,12 @@ import java.io.Serializable;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.hateoas.RepresentationModel;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Setter
+@Getter
 @EqualsAndHashCode(callSuper=false)
 public class MotoVO extends RepresentationModel<MotoVO> implements Serializable{
 
@@ -16,11 +18,15 @@ public class MotoVO extends RepresentationModel<MotoVO> implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	
+	@SuppressWarnings("unused")
 	private Integer id;
 	
 	@NotEmpty(message = "{campo.cor.obrigatorio}")
 	private String cor;
 	
+	@SuppressWarnings("unused")
 	private Integer cilindradas;
+	
+	private Boolean andando;
 
 }
